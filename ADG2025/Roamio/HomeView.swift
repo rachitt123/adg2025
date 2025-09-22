@@ -190,12 +190,12 @@ struct NearbyGemsSection: View {
                     CardView(imageName: "temple1",
                              title: "Chennai Half Day: Private Guided City Tour",
                              badge: "Bestselling Tours",
-                             price: "₹3699")
+                             price: "₹1500")
                     CardView(imageName: "temple1",
                              title: "Chennai full day tour- private guided city tour",
                              badge: nil,
-                             price: "₹2999")
-                    CardView(imageName: "temple1",
+                             price: "₹2899")
+                    CardView(imageName: "beach",
                              title: "Marina Beach Walking Tour",
                              badge: "Popular",
                              price: "₹999")

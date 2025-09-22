@@ -20,7 +20,7 @@ struct DealsPage: View {
         // Malaysia
         Deal(country: "Malaysia", location: "Kuala Lumpur", title: "Aquaria KLCC Ticket", discount: "5% off", price: "₹953", imageName: "89"),
         Deal(country: "Malaysia", location: "Genting Highlands", title: "Premium Outlets Cable Car", discount: "10% off", price: "₹231", imageName: "premiumoutlest"),
-        Deal(country: "Malaysia", location: "Selangor", title: "Zoo Negara Ticket", discount: "8% off", price: "₹520", imageName: "zoonegara"),
+        Deal(country: "Malaysia", location: "Selangor", title: "Zoo Negara Tickets", discount: "8% off", price: "₹520", imageName: "zoonegara"),
         Deal(country: "Malaysia", location: "Johor Bahru", title: "LEGOLAND Malaysia Ticket", discount: "8% off", price: "₹1200", imageName: "legolandmalaysia"),
         
         // UAE
@@ -64,7 +64,7 @@ struct DealsPage: View {
                     
                     // Country selection
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 12) {
+                        HStack(spacing: 11) {
                             ForEach(countries, id: \.self) { country in
                                 Text(country)
                                     .font(.subheadline).bold()
@@ -105,10 +105,10 @@ struct DealsPage: View {
                     // Deals grid
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
                         ForEach(deals.filter { $0.country == selectedCountry }) { deal in
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: 10) {
                                 Image(deal.imageName)
                                     .resizable()
-                                    .scaledToFill()
+                                    
                                     .frame(height: 150)
                                     .clipped()
                                     .cornerRadius(15)
